@@ -6,9 +6,11 @@ const express = require ("express")
 const app = express()
 
 const auth = require("./routes/Auth")
+const restaurant = require("./routes/restaurant")
 const cors = require("cors")
 
 app.use(cors())
 app.use(express.json()) // To parse JSON data from the request body
  app.use("/api/v1/users", auth) // To use the auth routes
+ app.use("/api/v1/restaurants", restaurant) // To use the restaurant routes
 module.exports = app
