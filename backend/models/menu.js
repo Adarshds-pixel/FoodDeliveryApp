@@ -3,7 +3,7 @@ const mongoose=require('mongoose')
 const menuSchema=new mongoose.Schema({
     menu:[{
         category:{
-            type:string
+            type:"String"
         },
         items:[{
             type:mongoose.Schema.Types.ObjectId,
